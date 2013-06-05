@@ -145,6 +145,10 @@ LOGGING = {
     }
 }
 
+WUNDERGROUND_API_URL = 'http://api.wunderground.com/api/'
+# Override in settings_local.py
+WUNDERGROUND_API_KEY = None
+
 try:
     from settings_local import *
 except ImportError:

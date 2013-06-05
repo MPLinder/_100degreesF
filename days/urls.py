@@ -1,12 +1,8 @@
 from django.conf.urls import patterns, include, url
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
 
-
-urlpatterns = patterns('',
-    url(r'^$', include('days.urls')),
+urlpatterns = patterns('days.views',
+    url(r'^$', 'days', name='days'),
     # url(r'^_100degreesF/', include('_100degreesF.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
