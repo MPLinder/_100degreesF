@@ -21,3 +21,6 @@ class Day(models.Model):
     date = models.DateTimeField()
     city = models.ForeignKey(City)
     temp = models.IntegerField()
+
+    class Meta:
+        unique_together = ('date', 'city')

@@ -1,6 +1,12 @@
 <!doctype html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
 
+<h2>Number of days 100 degrees F or over in {{ city }} for the year {{ year }}:</h2>
 
+<p>{{ days|length }}</p>
+
+{%  for date,temp in days.items %}
+    <p>{{ date|date:"M/d" }}: {{ temp }}</p>
+{% endfor %}
 
 <p>Weather data provided by <a href="http://www.wunderground.com"><img src="http://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" width="126"></a></p>
 </html>
