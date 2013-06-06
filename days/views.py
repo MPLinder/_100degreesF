@@ -9,7 +9,7 @@ from days.models import Day, City
 
 def days(request):
     city = request.GET.get('city', 'Austin')
-    # TODO: cities may have the same name
+    # TODO: cities may have the same name, or may not exist
     city = City.objects.get(name=city)
 
     year = request.GET.get('year', datetime.datetime.today().year)
